@@ -32,7 +32,7 @@ public class SubdirectoriesApplication {
 
 		List<String> outputCommands = new ArrayList<>();
 		for (Command command : comands) {
-			outputCommands.add(commandExcecutor.execute(command, fileSystem));
+			outputCommands.addAll(commandExcecutor.execute(command, fileSystem));
 		}
 
 		return StringUtils.listToStringArray(outputCommands);

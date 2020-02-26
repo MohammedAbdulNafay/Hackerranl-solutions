@@ -27,9 +27,9 @@ public class Directory {
     
     public String printSubdirectories() {
         if (this.childrens.isEmpty()) return "No subdirectories";
-        
+
         StringBuilder sb = new StringBuilder();
-        
+
         Map<String, Directory> sortedChildrens = new TreeMap<>(childrens);
         for (Map.Entry<String, Directory> dir : sortedChildrens.entrySet()) {
             sb.append(dir.getKey() + this.getTabs(dir.getKey().length()));

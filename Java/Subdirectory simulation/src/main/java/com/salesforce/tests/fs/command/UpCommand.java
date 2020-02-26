@@ -12,7 +12,8 @@ public class UpCommand implements Command {
         if (current.getParent() == null) {
             return "Cannot move up from root directory";
         }
-        
+
+        fileSystem.setCurrent(current.getParent());
         return "";
     }
     

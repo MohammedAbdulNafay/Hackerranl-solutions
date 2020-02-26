@@ -14,7 +14,7 @@ public class CommandFactory {
         for (String inputLine : inputLines) {
             String[] splittedCommand = inputLine.split(" ");
             String commandName = splittedCommand[0];
-            String argument = (splittedCommand.length > 1)? splittedCommand[1] : "";
+            String argument = (splittedCommand.length > 1)? splittedCommand[splittedCommand.length-1] : "";
     
             Command command = this.buildCommand(commandName, argument);
             if (command != null) commands.add(command);
